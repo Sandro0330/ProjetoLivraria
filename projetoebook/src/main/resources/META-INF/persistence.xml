@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<persistence version="2.1"
+    xmlns="http://java.sun.com/xml/ns/persistence" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="livraria" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <!-- Java Transaction Api -->
+        <jta-data-source>java:jboss/datasources/ebooksDS</jta-data-source>
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+        </properties>
+    </persistence-unit>
+</persistence> 
