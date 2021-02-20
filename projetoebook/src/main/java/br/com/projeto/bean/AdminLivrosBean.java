@@ -30,15 +30,14 @@ public class AdminLivrosBean {
 
 
 	@Transactional
-	public void salvar() {
+	public String salvar() {
 		for (Integer autorId : autoresId) {
 			livro.getAutores().add(new Autor(autorId));
 		}
 		dao.salvar(livro);
 		System.out.println("Livro Cadastrado: " + livro);
 		
-		this.livro = new Livro();
-		this.autoresId = new ArrayList<>();
+		return "/livros/lista?faces-redirect=true";
 
 	}
 	
