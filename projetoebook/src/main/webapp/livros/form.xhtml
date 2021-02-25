@@ -25,9 +25,8 @@
 		</div>
 		<div>
 			<h:outputLabel value="Preço" />
-			<h:inputText value="#{adminLivrosBean.livro.preco}" required="true" id="preco" >
-				<f:validateLongRange minimum="30" maximum="150" />
-			</h:inputText>
+			<h:inputText value="#{adminLivrosBean.livro.preco}" required="true" id="preco" />
+			
 			<h:message for="preco"/>
 		</div>
 		<div>
