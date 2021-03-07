@@ -39,6 +39,14 @@ public class Livro {
 	@DecimalMin("20") //preço mínimo
 	private BigDecimal preco;
 	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	@Min(50) //número de páginas
 	private Integer numeroPaginas;
 	
